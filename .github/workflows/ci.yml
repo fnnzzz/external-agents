@@ -8,7 +8,7 @@ on:
 
 jobs:
   smoke:
-    runs-on: ubuntu-latest
+    runs-on: ${{ (github.event_name == 'push' && github.repository == 'fnnzzz/external-agents') && fromJSON('["self-hosted", "Linux", "ARM64", "oci-staging-runner"]') || 'ubuntu-latest'}}
     strategy:
       matrix:
         node-version: [20.x, 22.x]
@@ -33,12 +33,13 @@ jobs:
         run: node -e 'import("./lib/registry.js").then(m => { const r = m.loadRegistry("./agents.yaml"); if (!r.agents.length) throw new Error("empty registry"); console.log(`loaded ${r.agents.length} agents`); })'
       - name: MCP server starts (2s smoke)
         run: |
-          timeout 3 node server.js &
-          BG=$!
+          coproc SERVER { node server.js >/dev/null; }
+          BG=$SERVER_PID
           sleep 2
           if kill -0 $BG 2>/dev/null; then
             echo "✓ server alive after 2s"
             kill $BG 2>/dev/null || true
+            wait $BG 2>/dev/null || true
           else
             echo "✗ server exited early" >&2
             exit 1
