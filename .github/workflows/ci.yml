@@ -8,7 +8,7 @@ on:
 
 jobs:
   smoke:
-    runs-on: ubuntu-latest
+    runs-on: ${{ (github.event_name == 'push' && github.repository == 'fnnzzz/external-agents') && fromJSON('["self-hosted", "linux", "arm64", "oci-staging-runner"]') || 'ubuntu-latest' }}
     strategy:
       matrix:
         node-version: [20.x, 22.x]
