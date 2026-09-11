@@ -33,7 +33,7 @@ jobs:
         run: node -e 'import("./lib/registry.js").then(m => { const r = m.loadRegistry("./agents.yaml"); if (!r.agents.length) throw new Error("empty registry"); console.log(`loaded ${r.agents.length} agents`); })'
       - name: MCP server starts (2s smoke)
         run: |
-          coproc SERVER { node server.js; }
+          coproc SERVER { node server.js >/dev/null; }
           BG=$SERVER_PID
           sleep 2
           if kill -0 $BG 2>/dev/null; then
