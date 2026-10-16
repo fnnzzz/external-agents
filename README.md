@@ -4,8 +4,12 @@
 [![Install to Codex](https://img.shields.io/badge/Install_to-Codex-24292f?style=for-the-badge&logo=openai&logoColor=white)](#-2-minute-setup)
 [![One-command install](https://img.shields.io/badge/curl_%7C_bash-one_command-4a8?style=for-the-badge)](#-2-minute-setup)
 [![npm](https://img.shields.io/npm/v/@mrrlin-dev/external-agents?style=for-the-badge)](https://www.npmjs.com/package/@mrrlin-dev/external-agents)
+[![Part of Mrrlin](https://img.shields.io/badge/Part_of-Mrrlin.com-7c3aed?style=for-the-badge&logo=sparkles&logoColor=white)](https://mrrlin.com)
 
 **Route work from your coding agent across 20+ free-tier LLMs. Cut your bill 10-100×.**
+
+> 🔮 **Part of [Mrrlin (mrrlin.com)](https://mrrlin.com)** — The operator-facing, docs-first autonomous workspace & multi-agent orchestration platform.
+> We open-sourced `external-agents` so any developer using Claude Code, OpenAI Codex, or Cursor can leverage free-tier multi-model routing and adversarial consensus panels without paying per-token markups. Ships standalone under MIT.
 
 ![architecture: primary agent → external-agents → six free-tier providers, one pool of tokens](docs/hero.png)
 
@@ -118,11 +122,17 @@ The `dispatch` and `pick_agents` MCP tools carry this guidance in their descript
 
 ---
 
-## Mrrlin uses this
+## 🔮 Mrrlin uses this (and you can too)
 
-[Mrrlin](https://mrrlin.com) is the platform this was extracted from. Its consensus gate — every design and every PR diff — runs a 4-reviewer panel: GPT + Gemini over MCP + **two dynamic terminal reviewers pulled from this exact pool** every round. Free-tier terminals mean the gate is essentially free to run on every substantial change, and cross-model diversity beats any single-model reviewer.
+[**Mrrlin (mrrlin.com)**](https://mrrlin.com) is the autonomous engineering and growth workspace this engine was extracted from.
 
-You don't need Mrrlin's gate to use the pattern. Build your own reviewer panel, self-consistency check, jury-of-N verifier — the primitives are unopinionated.
+In Mrrlin, autonomous agents aren't just one-off chat windows — they collaborate across full software lifecycles under strict operator governance:
+- **🛡️ 4-Model Consensus Panels:** Every high-stakes architecture spec, refactor plan, and PR diff is reviewed by an adversarial panel: GPT-5 + Gemini Pro over MCP + **two dynamic free-tier terminal reviewers from this exact pool**. Free-tier routing means running a 4-reviewer consensus panel on every git commit costs virtually $0.
+- **🌿 Ephemeral Worktree Sandboxes:** Coding agents run inside isolated Git worktrees (`~/.mrrlin/worktrees`), preventing workspace contamination and race conditions.
+- **⚡ Autopilot Kanban & Triage:** Background coordinator loops auto-triage incoming tasks, formulate execution plans, and assign the best model tier for the job.
+- **🎚️ Multi-Tier Autonomy:** Tasks declare clear boundaries: `auto` (hands-off), `minimal_human` (sign off only on dangerous/destructive ops), or `human_only`.
+
+You don't need Mrrlin to use `external-agents` — the MCP server and CLI are completely standalone. But if you're building multi-agent workflows or looking for a full operator workspace, check out **[mrrlin.com](https://mrrlin.com)**.
 
 ---
 
@@ -172,9 +182,15 @@ No. `external-agents` is standalone. Mrrlin uses it internally, but the package 
 
 ---
 
-## About Mrrlin
+## 🔮 About Mrrlin
 
-`external-agents` is one piece of [**Mrrlin**](https://mrrlin.com) — an AI orchestration platform for solo developers and small teams. If you like this package, you'll probably like the rest of Mrrlin.
+`external-agents` is an open-source component of [**Mrrlin**](https://mrrlin.com) — the operator-facing autonomous engineering platform designed for solo developers and small teams who want to scale their output with AI coding agents.
+
+- 🌐 **Platform:** [https://mrrlin.com](https://mrrlin.com)
+- 📖 **Architecture & Philosophy:** Docs-first multi-agent orchestration, consensus review gates, and deterministic PostgreSQL invariants.
+- 💬 **Get in Touch:** If you're building autonomous agents or multi-model systems, follow our roadmap and join the community at [mrrlin.com](https://mrrlin.com).
+
+---
 
 ## License
 
