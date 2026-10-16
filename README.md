@@ -8,8 +8,8 @@
 
 **Route work from your coding agent across 20+ free-tier LLMs. Cut your bill 10-100×.**
 
-> 🔮 **Part of [Mrrlin (mrrlin.com)](https://mrrlin.com)** — The operator-facing, docs-first autonomous workspace & multi-agent orchestration platform.
-> We open-sourced `external-agents` so any developer using Claude Code, OpenAI Codex, or Cursor can leverage free-tier multi-model routing and adversarial consensus panels without paying per-token markups. Ships standalone under MIT.
+> 🔮 **Part of [Mrrlin (mrrlin.com)](https://mrrlin.com)** — The autonomous workspace for developers running AI coding agents.
+> We extracted `external-agents` from Mrrlin so anyone using Claude Code, OpenAI Codex, or Cursor can leverage free-tier multi-model routing and adversarial review panels. Ships standalone under MIT.
 
 ![architecture: primary agent → external-agents → six free-tier providers, one pool of tokens](docs/hero.png)
 
@@ -124,15 +124,15 @@ The `dispatch` and `pick_agents` MCP tools carry this guidance in their descript
 
 ## 🔮 Mrrlin uses this (and you can too)
 
-[**Mrrlin (mrrlin.com)**](https://mrrlin.com) is the autonomous engineering and growth workspace this engine was extracted from.
+[**Mrrlin (mrrlin.com)**](https://mrrlin.com) is the autonomous engineering workspace this engine was extracted from.
 
-In Mrrlin, autonomous agents aren't just one-off chat windows — they collaborate across full software lifecycles under strict operator governance:
-- **🛡️ 4-Model Consensus Panels:** Every high-stakes architecture spec, refactor plan, and PR diff is reviewed by an adversarial panel: GPT-5 + Gemini Pro over MCP + **two dynamic free-tier terminal reviewers from this exact pool**. Free-tier routing means running a 4-reviewer consensus panel on every git commit costs virtually $0.
-- **🌿 Ephemeral Worktree Sandboxes:** Coding agents run inside isolated Git worktrees (`~/.mrrlin/worktrees`), preventing workspace contamination and race conditions.
-- **⚡ Autopilot Kanban & Triage:** Background coordinator loops auto-triage incoming tasks, formulate execution plans, and assign the best model tier for the job.
-- **🎚️ Multi-Tier Autonomy:** Tasks declare clear boundaries: `auto` (hands-off), `minimal_human` (sign off only on dangerous/destructive ops), or `human_only`.
+In Mrrlin, autonomous agents collaborate across software lifecycles under clear human oversight:
+- **🛡️ 4-Model Consensus Panels:** High-stakes architecture specs and PR diffs are reviewed by an adversarial panel: GPT + Gemini Pro alongside **two dynamic free-tier terminal reviewers from this exact pool**. Stacking free tiers keeps the incremental compute cost of cross-model verification near zero.
+- **🌿 Ephemeral Worktrees:** Coding agents run inside isolated Git worktrees (`~/.mrrlin/worktrees`), significantly reducing branch interference and file conflicts during parallel execution.
+- **⚡ Autopilot & Triage:** Background coordinators auto-triage incoming tasks, formulate execution plans, and assign the most cost-effective model tier for each step.
+- **🎚️ Multi-Tier Autonomy:** Tasks declare clear boundaries: `auto` (hands-off), `minimal_human` (sign off only on sensitive actions), or `human_only`.
 
-You don't need Mrrlin to use `external-agents` — the MCP server and CLI are completely standalone. But if you're building multi-agent workflows or looking for a full operator workspace, check out **[mrrlin.com](https://mrrlin.com)**.
+You don't need Mrrlin to use `external-agents` — this package is completely standalone. But if you are building multi-agent workflows or looking for a unified workspace, check out **[mrrlin.com](https://mrrlin.com)**.
 
 ---
 
@@ -184,11 +184,10 @@ No. `external-agents` is standalone. Mrrlin uses it internally, but the package 
 
 ## 🔮 About Mrrlin
 
-`external-agents` is an open-source component of [**Mrrlin**](https://mrrlin.com) — the operator-facing autonomous engineering platform designed for solo developers and small teams who want to scale their output with AI coding agents.
+`external-agents` is an open-source component of [**Mrrlin**](https://mrrlin.com) — an autonomous engineering workspace designed for solo developers and small teams scaling their output with AI coding agents.
 
-- 🌐 **Platform:** [https://mrrlin.com](https://mrrlin.com)
-- 📖 **Architecture & Philosophy:** Docs-first multi-agent orchestration, consensus review gates, and deterministic PostgreSQL invariants.
-- 💬 **Get in Touch:** If you're building autonomous agents or multi-model systems, follow our roadmap and join the community at [mrrlin.com](https://mrrlin.com).
+- 🌐 **Website:** [mrrlin.com](https://mrrlin.com)
+- 💡 **Philosophy:** Docs-first multi-agent orchestration, consensus review gates, and verifiable code execution.
 
 ---
 
