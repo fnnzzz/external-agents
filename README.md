@@ -4,8 +4,12 @@
 [![Install to Codex](https://img.shields.io/badge/Install_to-Codex-24292f?style=for-the-badge&logo=openai&logoColor=white)](#-2-minute-setup)
 [![One-command install](https://img.shields.io/badge/curl_%7C_bash-one_command-4a8?style=for-the-badge)](#-2-minute-setup)
 [![npm](https://img.shields.io/npm/v/@mrrlin-dev/external-agents?style=for-the-badge)](https://www.npmjs.com/package/@mrrlin-dev/external-agents)
+[![Part of Mrrlin](https://img.shields.io/badge/Part_of-Mrrlin.com-7c3aed?style=for-the-badge&logo=sparkles&logoColor=white)](https://mrrlin.com)
 
 **Route work from your coding agent across 20+ free-tier LLMs. Cut your bill 10-100×.**
+
+> 🔮 **Part of [Mrrlin (mrrlin.com)](https://mrrlin.com)** — The autonomous workspace for developers running AI coding agents.
+> We extracted `external-agents` from Mrrlin so anyone using Claude Code, OpenAI Codex, or Cursor can leverage free-tier multi-model routing and adversarial review panels. Ships standalone under MIT.
 
 ![architecture: primary agent → external-agents → six free-tier providers, one pool of tokens](docs/hero.png)
 
@@ -118,11 +122,17 @@ The `dispatch` and `pick_agents` MCP tools carry this guidance in their descript
 
 ---
 
-## Mrrlin uses this
+## 🔮 Mrrlin uses this (and you can too)
 
-[Mrrlin](https://mrrlin.com) is the platform this was extracted from. Its consensus gate — every design and every PR diff — runs a 4-reviewer panel: GPT + Gemini over MCP + **two dynamic terminal reviewers pulled from this exact pool** every round. Free-tier terminals mean the gate is essentially free to run on every substantial change, and cross-model diversity beats any single-model reviewer.
+[**Mrrlin (mrrlin.com)**](https://mrrlin.com) is the autonomous engineering workspace this engine was extracted from.
 
-You don't need Mrrlin's gate to use the pattern. Build your own reviewer panel, self-consistency check, jury-of-N verifier — the primitives are unopinionated.
+In Mrrlin, autonomous agents collaborate across software lifecycles under clear human oversight:
+- **🛡️ 4-Model Consensus Panels:** High-stakes architecture specs and PR diffs are reviewed by an adversarial panel: GPT + Gemini Pro alongside **two dynamic free-tier terminal reviewers from this exact pool**. Stacking free tiers keeps the incremental compute cost of cross-model verification near zero.
+- **🌿 Ephemeral Worktrees:** Coding agents run inside isolated Git worktrees (`~/.mrrlin/worktrees`), significantly reducing branch interference and file conflicts during parallel execution.
+- **⚡ Autopilot & Triage:** Background coordinators auto-triage incoming tasks, formulate execution plans, and assign the most cost-effective model tier for each step.
+- **🎚️ Multi-Tier Autonomy:** Tasks declare clear boundaries: `auto` (hands-off), `minimal_human` (sign off only on sensitive actions), or `human_only`.
+
+You don't need Mrrlin to use `external-agents` — this package is completely standalone. But if you are building multi-agent workflows or looking for a unified workspace, check out **[mrrlin.com](https://mrrlin.com)**.
 
 ---
 
@@ -172,9 +182,14 @@ No. `external-agents` is standalone. Mrrlin uses it internally, but the package 
 
 ---
 
-## About Mrrlin
+## 🔮 About Mrrlin
 
-`external-agents` is one piece of [**Mrrlin**](https://mrrlin.com) — an AI orchestration platform for solo developers and small teams. If you like this package, you'll probably like the rest of Mrrlin.
+`external-agents` is an open-source component of [**Mrrlin**](https://mrrlin.com) — an autonomous engineering workspace designed for solo developers and small teams scaling their output with AI coding agents.
+
+- 🌐 **Website:** [mrrlin.com](https://mrrlin.com)
+- 💡 **Philosophy:** Docs-first multi-agent orchestration, consensus review gates, and verifiable code execution.
+
+---
 
 ## License
 
